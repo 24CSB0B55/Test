@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="java.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div >
+        <form name="movieform" onsubmit="return validate()"  method="post">
+        <label for="movie" class="head">Enter Movie Name:</label><br>
+        <input type="text" id="movie" name="movie" onfocus="this.value=''" required><br>
+    <input type="submit" value="Clear List">
+    <input type="submit" value="Add movie">
+</form>
+</div>
+<p id="demo"></p>
+    <script>
+       function validate(){
+         let x=document.forms["movieform"]["movie"].value;
+         if(x==""||x==null){
+            alert("movie name must be filled out!!");
+            return false;
+         }
+         else
+         {
+            let name=document.forms["movieform"]["movie"].value;
+            const movies=[name];
+            let length=movies.length;
+            if(length>=1)
+            {movies.push(name);
+                document.getElementById("demo").innerHTML=movies;}
+           return false;
+         }
+       };
+       function clearing(){
+        alert("The list has been cleared!!");
+        return true;
+       }
+
+    
+    </script>
+</body>
+</html>

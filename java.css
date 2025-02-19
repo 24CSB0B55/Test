@@ -1,0 +1,39 @@
+div{
+   background-image: url('alice.jfif');
+    padding:10px;
+    margin:20px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:#ccc;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+.head{
+    font-weight: bold;
+    color:white;
+}
+input[type=text]{
+width:40%;
+padding:15px 20px;
+margin:8px 0;
+display:inline-block;
+border:1px solid #ccc;
+border-radius:4px;
+box-sizing:border-box;
+}
+input[type=submit]{
+    cursor:pointer;
+    background-color: rgb(55, 204, 55);
+    color: white;
+    padding:8px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+input[type=submit]:hover{
+transform: scale(1.1);
+}
